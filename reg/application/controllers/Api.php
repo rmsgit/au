@@ -210,10 +210,10 @@ class Api extends CI_Controller {
 
                             $this->email->initialize($config);
 
-                            $this->email->from('ruwan.m.samaraweera@gmail.com', 'AURORA 2K17');
+                            $this->email->from('aurora@sci.sjp.ac.lk', 'AURORA 2K17');
                             $this->email->to($email);
                             $this->email->subject('AURORA Registration');
-                            $this->email->message('Your password is:'.$data->password);
+                            $this->email->message('Registration successful ! Now you can login to http://www.aurora.usjp.ac.lk using your email address . Your password is:'.$data->password);
                             $this->email->send();
 
                             $this->send(200, "Success");
